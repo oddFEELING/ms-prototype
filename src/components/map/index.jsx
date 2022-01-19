@@ -6,7 +6,7 @@ import React, {
   useContext,
 } from 'react';
 import axios from 'axios';
-import mapboxGl from 'mapbox-gl';
+import mapboxgl from 'mapbox-gl';
 import HandLoader from '../../assets/animations/HandLoader';
 import GLobalContext from '../../contexts/AppContext/Context';
 
@@ -37,11 +37,11 @@ const Map = (props) => {
 
   useEffect(() => {
     //   set mapbox token
-    mapboxGl.accessToken =
+    mapboxgl.accessToken =
       'pk.eyJ1Ijoib2RkZmVlbGluZyIsImEiOiJja3lpZDZwZGkxdTFyMm5xaHE4eHNnMmxuIn0._ikjEk8kfsj4SWT1KCtuMg';
 
     setMap(
-      new mapboxGl.Map({
+      new mapboxgl.Map({
         container: mapRef.current,
         style: 'mapbox://styles/mapbox/streets-v11',
         center:
@@ -52,11 +52,11 @@ const Map = (props) => {
       })
 
         .addControl(
-          new mapboxGl.NavigationControl({ visualizePitch: true }),
+          new mapboxgl.NavigationControl({ visualizePitch: true }),
           'bottom-right'
         )
         .addControl(
-          new mapboxGl.GeolocateControl({
+          new mapboxgl.GeolocateControl({
             positionOptions: {
               enableHighAccuracy: true,
             },
@@ -92,11 +92,11 @@ const Map = (props) => {
           MarkerColor = colors.attention;
 
         // add the marker to map
-        new mapboxGl.Marker({ color: MarkerColor })
+        new mapboxgl.Marker({ color: MarkerColor })
           .setLngLat(data.location.coordinatesBefore)
           .addTo(Map) // add popups to markers
           .setPopup(
-            new mapboxGl.Popup({ offset: 25 }).setHTML(
+            new mapboxgl.Popup({ offset: 25 }).setHTML(
               `<img src = ${data.image} alt = ''/>
               <h2>${data.title}</h2>
               <p><b>Start Date: </b> ${data.maintenance[0].condition}</p>
