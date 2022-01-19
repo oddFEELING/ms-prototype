@@ -38,7 +38,7 @@ const Map = (props) => {
   useEffect(() => {
     //   set mapbox token
     mapboxGl.accessToken =
-      'sk.eyJ1Ijoib2RkZmVlbGluZyIsImEiOiJja3lscTcwZjAzOHRoMnhwYmRjOGRxMGV5In0.zDVFIZLB60dsnRkxAzOYGw';
+      'pk.eyJ1Ijoib2RkZmVlbGluZyIsImEiOiJja3lpZDZwZGkxdTFyMm5xaHE4eHNnMmxuIn0._ikjEk8kfsj4SWT1KCtuMg';
 
     setMap(
       new mapboxGl.Map({
