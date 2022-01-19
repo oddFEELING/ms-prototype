@@ -1,0 +1,58 @@
+// use theme
+@use '../../assets/theme/theme..module.scss' as *;
+
+.container {
+  width: 97%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.8vw;
+  color: clr-picker('dk');
+  padding: 0.2vh 1.5vw;
+  font-weight: 400;
+  margin-top: 2vh;
+  position: absolute;
+  flex-shrink: 0;
+  z-index: 5;
+  border-left: thin solid clr-picker('lt');
+  border-top: thin solid clr-picker('lt');
+  backdrop-filter: blur(10);
+  background-color: rgba(clr-picker('lt'), 0.35);
+  box-shadow: 3px 9px 30px rgba(clr-picker('dk'), 0.1);
+}
+
+.content__area {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5vw;
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    object-position: center;
+    box-shadow: 3px 6px 12px rgba(clr-picker('dk'), 0.3);
+
+    &:hover {
+      box-shadow: 3px 6px 20px rgba(clr-picker('dk'), 0.6);
+    }
+  }
+
+  button {
+    height: 50%;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0.3vw;
+    color: clr-picker('lt');
+    background-color: rgba(clr-picker('dk'), 0.6);
+
+    &:hover {
+      @include setBg('error');
+      box-shadow: 3px 6px 12px rgba(clr-picker('dk'), 0.3);
+    }
+  }
+}

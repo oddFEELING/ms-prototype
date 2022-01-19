@@ -1,0 +1,18 @@
+// import theme
+@use '../../assets/theme/theme..module.scss' as *;
+
+.container {
+  width: 85%;
+  height: 100vh;
+  display: flex;
+  overflow-y: scroll;
+  align-items: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  z-index: 2;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,0 +1,38 @@
+//--------------------------------------->
+//-->  Theme file
+//--------------------------------------->
+
+//--------------------------------------->  import fonts
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//--------------------------------------->  Set color
+$colors: (
+  'lt': #ffffff,
+  'lt_2': #eeeeee,
+  'dk': #23282b,
+  'success': #5baf5f,
+  'info': #18bcd1,
+  'warning': #fd9913,
+  'error': #e9423f,
+);
+
+// function to pick color
+@function clr-picker($color_name) {
+  @return map-get($colors, $color_name);
+}
+
+// mixin to set bg to color
+@mixin setBg($color) {
+  background-color: clr-picker($color);
+}
+
+//--------------------------------------->  set fonts
+// font-family: 'Lora', serif;
+// font-family: 'Montserrat', sans-serif;
+
+$font_1: 'Montserrat', sans-serif;
+$font_2: 'Lora', serif;
+
+@mixin font($font) {
+  font-family: $font;
+}

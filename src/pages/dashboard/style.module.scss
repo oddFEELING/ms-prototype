@@ -1,0 +1,71 @@
+// use theme
+@use '../../assets/theme/theme..module.scss' as *;
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vh;
+}
+
+.content__area {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+//-->  Tabel section
+.table {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  gap: 0.5vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  @include setBg('lt');
+  border-radius: 0.4vw;
+  box-shadow: 5px 13px 35px rgba(clr-picker('dk'), 0.1);
+}
+
+.table__title {
+  width: 95%;
+  height: 90px;
+  margin-top: -5%;
+  display: flex;
+  padding: 2% 4%;
+  border-radius: 0.2vw;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  @include font($font_1);
+  @include setBg('warning');
+  box-shadow: 3px 8px 20px rgba(clr-picker('dk'), 0.15);
+
+  //   theme setter
+  &[theme='dark'] {
+    color: clr-picker('lt');
+    @include setBg('dk');
+  }
+
+  //   text sections
+  h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: clr-picker('lt');
+  }
+
+  h4 {
+    @include font($font_2);
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: clr-picker('lt_2');
+  }
+}

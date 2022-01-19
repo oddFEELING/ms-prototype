@@ -1,0 +1,38 @@
+// use theme
+@use '../../assets/theme/theme..module.scss' as *;
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  @include setBg('lt_2');
+  gap: 4vh;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 8rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+  }
+
+  button {
+    width: 20vw;
+    height: 7vh;
+    border: 0;
+    @include setBg('info');
+    cursor: pointer;
+    font-size: 1.5rem;
+    box-shadow: 3px 6px 13px rgba(clr-picker('dk'), 0.3);
+
+    &:hover {
+      transform: translateY(-10px);
+      @include setBg('dk');
+      color: clr-picker('lt');
+      border-radius: 0.2vh;
+      box-shadow: 3px 6px 13px rgba(clr-picker('dk'), 0.4);
+    }
+  }
+}
