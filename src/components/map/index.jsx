@@ -43,7 +43,7 @@ const Map = (props) => {
     setMap(
       new mapboxgl.Map({
         container: mapRef.current,
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/oddfeeling/ckylzrkikb9ho15pc62xhzuq1',
         center:
           (Data && Data[0].location.coordinatesBefore) ||
           globalState.map.center,
