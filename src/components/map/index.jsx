@@ -47,7 +47,7 @@ const Map = (props) => {
         center:
           (Data && Data[0].location.coordinatesBefore) ||
           globalState.map.center,
-        zoom: 14 || globalState.map.zoom,
+        zoom: 5 || globalState.map.zoom,
         pitch: 50,
       })
 
@@ -67,7 +67,7 @@ const Map = (props) => {
           'bottom-right'
         )
     );
-  }, [Data]);
+  }, []);
 
   // Add markers to map
   useEffect(() => {

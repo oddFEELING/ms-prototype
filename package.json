@@ -33,9 +33,6 @@
       "react-app/jest"
     ]
   },
-  "resolutions": {
-    "mini-css-extract-plugin": "^2.5.1"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
